@@ -5,6 +5,7 @@ CREATE TABLE countries(
     region_id INTEGER,
     population INTEGER
 );
+
 INSERT INTO countries (country_name, region_id, population)
 VALUES ('USA', 51, 140000000);
 

@@ -1,2 +1,2 @@
-drop TABLE tasks [IF not ex];
+drop TABLE tasks ;
 drop DATABASE lab1;
