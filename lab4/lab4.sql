@@ -53,3 +53,31 @@ UPDATE Boxes SET value = value * 0.85 WHERE value =(SELECT value FROM Boxes ORDE
 
 DELETE FROM Boxes WHERE value < 150;
 DELETE FROM Boxes WHERE warehouse IN (SELECT code FROM Warehouses WHERE location = 'New York') RETURNING *;
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UPDATE Boxes SET value = value *0.85 WHERE value = (SELECT value from Boxes order by DESC LIMIT 1 OFFSET 2);
+
+
+
+
+
+
+
+
+
+
