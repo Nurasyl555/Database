@@ -49,11 +49,14 @@ SELECT e.first_name, e.last_name, e.department_id, d.department_name
 FROM employees e
 LEFT JOIN departments d ON e.department_id = d.department_id
 WHERE d.department_id =40 OR d.department_id=80;
-
+CREATE INDEX index_id_d ON departments(department_id);
+CREATE INDEX index_id_e ON employees(department_id);
+CREATE INDEX index_id_l ON locations(location_id);
 SELECT e.first_name, e.last_name,  e.department_id , d.department_id, l.city, l.state_province
 FROM employees e
 left join departments d ON e.department_id = d.department_id
 LEFT JOIN  locations l ON d.location_id = l.location_id ;
+
 
 SELECT d.department_id, d.department_name
 FROM departments d
@@ -64,6 +67,4 @@ SELECT e.first_name, e.last_name, e.department_id, d.department_name
 FROM employees e
 LEFT JOIN departments d ON e.department_id = d.department_id;
 
-SELECT e.first_name, d.department_name
-FROM employees e JOIN departments d on d.department_id = e.department_id
-WHERE salary < AVG(salary);
+;
