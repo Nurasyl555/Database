@@ -33,7 +33,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 SELECT number_series(10);
-
+--4
 CREATE OR REPLACE FUNCTION find_employee(emp_name VARCHAR)
     RETURNS TABLE(id INTEGER, name VARCHAR, position VARCHAR, salary NUMERIC) AS $$
 BEGIN
